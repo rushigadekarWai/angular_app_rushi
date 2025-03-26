@@ -15,38 +15,36 @@ import { ProfileComponent } from './profile/profile.component';
 
 export class AppComponent {
   
-  count:number = 0;
-  name:string = 'rushikesh'
+ name = "";
+ displayName="";
+ email=""
+ 
+ getName(event:Event){
+  this.name  = (event.target as HTMLInputElement).value;
+  
+ }
+  
+ showName(){
+  this.displayName = this.name;
+  
+ }
 
-  handleIncrement(){
-    this.count += 1;
-
-  }
-
-  handleDecrement(){
-    this.count = this.count - 1;
-  }
-
-  handleRest(){
-    this.count = 0
-  }
-
-  handleCounter(val:string){
-    if(val === 'minus'){
-      this.count = this.count - 1;
-    }
-    else if(val === 'plus'){
-      this.count += 1;
-
-    }
-    else{
-      this.count = 0
-
-    }
-  }
+ setName(){
+  this.name = 'rushikesh'
+ }
 
 
+ 
+ getEmail(val:string){
+  console.log(val);
+  this.email = val;
 
+ }
+
+ setEmail(){
+  this.email = "default@gmail"
+
+ }
 }
 
 

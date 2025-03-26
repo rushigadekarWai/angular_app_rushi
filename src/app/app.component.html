@@ -7,11 +7,45 @@
 <button (click)="sum(1,2)" >Click me</button> -->
 
 
-<h1>Counter App</h1>
+<!-- <h1>Event in Angular</h1> -->
 
-<div style="text-align: center;">
-  <h2 class="count">{{count}}</h2>
-  <button class="btn bg-red" (click)="handleCounter('minus')">Decrement</button>
-  <button class="btn bg-black" (click)="handleCounter('reset')">Reset</button>
-  <button class="btn bg-green"  (click)="handleCounter('plus')">Increment</button>
+<!-- <button (click)="handleEvent($event)" class="btnn">Click me</button> -->
+<!-- <br>
+<br> -->
+<!-- <div ((mouseenter))="handleEvent($event)" style="background-color: green; width: 100px; height: 100px;">
+  
+  
+</div> -->
+
+<!-- <div (mouseenter)="handleEvent($event)" style="background-color: green; width: 100px; height: 100px;">
+
 </div>
+<br>
+<div (mouseleave)="handleEvent2($event)" style="background-color: blue; width: 100px; height: 100px;">
+
+</div>
+<br>
+<br>
+<input type="text" name="ss" id="ss" 
+(focus)="handleInput($event)"
+(input)="handleInput($event)">
+
+<h2>{{name}}</h2> -->
+
+
+<h2>Get and Set Input field value</h2>
+<h1>UserName: {{displayName}}</h1>
+
+<input type="text" value="{{name}}" (input)="getName($event)" placeholder="enter your value">
+<br>
+<br>
+<button (click)="showName()">Get Name</button>
+
+<button (click)="setName()">Set Name</button>
+
+<hr>
+
+<h1>Email: {{email}}</h1>
+<input type="text" value="{{email}}" placeholder="Enter Your Email" #emailFiled> 
+<button (click)="getEmail(emailFiled.value)" >Get Email</button>
+<button (click)="setEmail(                                                          )">Set Email</button>
