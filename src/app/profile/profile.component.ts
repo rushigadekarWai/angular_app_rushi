@@ -12,4 +12,9 @@ import { Component } from "@angular/core";
 
 export class ProfileComponent{
 
+  name:string = "shubham"
+
+  updateName(){
+    console.log('')
+  }
 }
