@@ -14,37 +14,16 @@ import { ProfileComponent } from './profile/profile.component';
 
 
 export class AppComponent {
-  
- name = "";
- displayName="";
- email=""
  
- getName(event:Event){
-  this.name  = (event.target as HTMLInputElement).value;
-  
- }
-  
- showName(){
-  this.displayName = this.name;
-  
- }
+  color = 1;
+  handleColor(val:number){
+   this.color = val
+  }
 
- setName(){
-  this.name = 'rushikesh'
- }
+  handleInput(event:Event){
+    this.color = parseInt((event.target as HTMLInputElement).value)
 
-
- 
- getEmail(val:string){
-  console.log(val);
-  this.email = val;
-
- }
-
- setEmail(){
-  this.email = "default@gmail"
-
- }
+  }
 }
 
 
