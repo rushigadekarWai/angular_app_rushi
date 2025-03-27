@@ -13,17 +13,22 @@ import { ProfileComponent } from './profile/profile.component';
 })
 
 
+
 export class AppComponent {
  
-  color = 1;
-  handleColor(val:number){
-   this.color = val
-  }
-
-  handleInput(event:Event){
-    this.color = parseInt((event.target as HTMLInputElement).value)
+  color='';
+  displayColor = ''
+  handleColor(color:string){
+    this.color = color;
 
   }
+  getColor(event:Event){
+    this.displayColor = (event.target as HTMLInputElement).value;
+  }
+  changeColor(){
+    this.color = this.displayColor;
+  }
+ 
 }
 
 

@@ -52,7 +52,7 @@
 
 
 
-<h1>If Else | Control flow</h1>
+<!-- <h1>If Else | Control flow</h1> -->
 <!-- 
 <button (click)="hide()">Hide div</button> <br>
 <button (click)="showBtn()">Show Div</button>
@@ -82,7 +82,7 @@
 } -->
 
 
-
+<!-- 
 <button (click)="handleColor(1)">red</button>
 <button (click)="handleColor(2)">blue</button>
 <button (click)="handleColor(3)">green</button>
@@ -103,4 +103,37 @@
 }
 @else{
   <div style="background-color: black; width: 100px; height: 100px;"></div>
+} -->
+
+<h1>Switch case in Angular </h1>
+<button (click)="handleColor('red')">red</button>
+<button (click)="handleColor('yellow')">yellow</button>
+<button (click)="handleColor('green')">green</button>
+<button (click)="handleColor('blue')">blue</button>
+<button (click)="handleColor('gold')">gold</button>
+<br>
+<input type="text" value="{{color}}" placeholder="enter a color" (input)="getColor($event)">
+
+<button (click)="changeColor()"> changeColor</button>
+
+@switch (color) {
+  @case ('red') {
+    <h1 style="color: red; ">Red color</h1>
+  }
+  @case ('yellow') {
+    <h1 style="color: yellow;">yellow color</h1>
+  }
+  @case ('blue') {
+    <h1 style="color: blue; ">blue color</h1>
+  }
+  @case ('green') {
+    <h1 style="color: green;">green color</h1>
+  }
+  @case ('gold') {
+    <h1 style="color: gold;">green color</h1>
+  }
+
 }
+
+
+
