@@ -1,9 +1,10 @@
 
-import { Component } from '@angular/core';
+import { Component, computed, effect, signal, WritableSignal } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { LoginComponent } from './login/login.component';
 import { SignUpComponent } from './sign-up/sign-up.component';
 import { ProfileComponent } from './profile/profile.component';
+import { single } from 'rxjs';
 
 @Component({
   selector: 'app-root',
@@ -16,20 +17,36 @@ import { ProfileComponent } from './profile/profile.component';
 
 export class AppComponent {
  
-  color='';
-  displayColor = ''
-  handleColor(color:string){
-    this.color = color;
+username = signal('rushi')
+count = signal(0);
 
-  }
-  getColor(event:Event){
-    this.displayColor = (event.target as HTMLInputElement).value;
-  }
-  changeColor(){
-    this.color = this.displayColor;
-  }
- 
+displayheading=false;
+
+
+constructor(){
+  effect(()=>{
+   if(this.count() == 2){
+    this.displayheading = true;
+    setTimeout(() => {
+      this.displayheading = false
+    }, 2000);
+   }
+  //  else{
+  //   this.displayheading = false
+  //  }
+  })
 }
+
+toggleValue(){
+  // this.displayheading = ! this.displayheading;
+  this.count.set(this.count()+1)
+}
+updateUsername(){
+
+}
+
+}
+
 
 
 

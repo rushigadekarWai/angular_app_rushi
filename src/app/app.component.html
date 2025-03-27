@@ -105,7 +105,7 @@
   <div style="background-color: black; width: 100px; height: 100px;"></div>
 } -->
 
-<h1>Switch case in Angular </h1>
+<!-- <h1>Switch case in Angular </h1>
 <button (click)="handleColor('red')">red</button>
 <button (click)="handleColor('yellow')">yellow</button>
 <button (click)="handleColor('green')">green</button>
@@ -133,7 +133,41 @@
     <h1 style="color: gold;">green color</h1>
   }
 
+} -->
+
+<!-- <h1>for loop in angular 19</h1>
+@for (user of users; track user) {
+  <h2>{{user}}</h2>
 }
 
+<hr>
+@for (stud of student; track stud.name; let id=$index) {
+  <h3>
+    <span>{{id}}</span>
+    <span>{{stud.name}}</span>
+    <span>{{stud.age}}</span>
+    <span>{{stud.place}}</span>
+    <button (click)="getName(stud.name)">getName</button>
 
+  </h3>
+} -->
+
+<h1>Basic of signal</h1>
+
+<!-- <button (click)="updateValue('dec')">Decrement</button>
+<h2>{{count()}}</h2>
+<button (click)="updateValue('inc')">Increase Value</button> -->
+
+<!-- <button (click)="count.set(count()-1)">Decrement</button>
+<h2>{{count()}}</h2>
+<button (click)="count.set(count()+1)">Increase Value</button> -->
+<!-- <button (click)="count.set(100)">Increase Property</button> -->
+
+<h2>{{count()}}</h2>
+<button (click)="toggleValue()">Update </button>
+
+@if (displayheading) {
+
+  <h1 style="background-color: greenyellow;">page heading</h1>
+}
 
